@@ -1,0 +1,144 @@
+/* universal selector */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html{
+    line-height: 1.5;
+    word-spacing: 1.5px;
+    letter-spacing: -0.25px;
+}
+
+body{
+    background: var(--prim-col);
+    color: var(--lt-col1);
+}
+
+/* shortcuts */
+:root{
+    --prim-col: #39434E;
+    --sec-col: #586553;
+    --lt-col1: #d7ffe8;
+    --lt-col2: #ccd5a1;
+    --white-col: #F7F7F7;
+}
+
+/* flex-container */
+.flex-container{
+    display: flex;
+    align-items: center;
+    margin: 1rem auto;
+}
+
+/* grid-container */
+.grid-container{
+    display: grid;
+    /* gap for both row & column */
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.grid-c-2{
+    grid-template-columns: 50% 50%;
+}
+
+.grid-c-3{
+    grid-template-columns: auto auto auto;
+}
+
+.c-light{
+    background: var(--lt-col1);
+    color: var(--prim-col);
+}
+
+/* item-content */
+
+.item-content{
+    padding: 0.5rem;
+    transition: all 0.175s;
+
+    /* border: cyan 2px solid; */
+}
+
+.hoverable:hover{
+    background: var(--lt-col1);
+    color: var(--prim-col);
+    /* cursor: pointer; */
+}
+
+.hoverable-dk:hover{
+    background: var(--prim-col);
+    color: var(--lt-col1);
+    
+    /* cursor: pointer; */
+}
+
+#opening{
+    height: 50vh;
+    align-content: center;
+}
+
+#opening .item-content:last-child{
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    outline: none;
+}
+
+/* button */
+button{
+    font-size: 100%;
+    margin: 0.75rem;
+    padding: 0.5rem;
+    cursor: pointer;
+
+    background: none;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.15s;
+}
+
+button:active{
+    transform: scale(0.95);
+}
+
+.btn-nobg{
+    border: var(--lt-col1) 2px solid;
+    color: var(--lt-col1);
+}
+
+.btn-nobg:hover{
+    background-color: var(--lt-col1);
+    color: var(--prim-col);
+}
+
+.btn-withbg{
+    border: var(--lt-col1) 2px solid;
+    background: var(--lt-col1);
+    color: var(--prim-col);
+}
+
+.btn-withbg:hover{
+    background: none;
+    color: var(--lt-col1);
+}
+
+.btn-dark{
+    border: var(--prim-col) 2px solid;
+    background: var(--prim-col);
+    color: var(--lt-col1);
+}
+
+.btn-lg{
+    padding: 0.5rem 4rem;
+}
+
+/* the name color will be changed */
+.highlight{
+    color: var(--lt-col2);
+}
